@@ -22,7 +22,7 @@ public class Carrito {
         joinColumns = @JoinColumn(name = "carrito_id"),
         inverseJoinColumns = @JoinColumn(name = "juego_id")
     )
-    private List<Juego> juegos = new ArrayList<>();
+    private List<Juego> juego = new ArrayList<>();
 
     private LocalDateTime fechaCreacion = LocalDateTime.now();
 
@@ -33,7 +33,7 @@ public class Carrito {
 
     // --- Lógica para calcular el total ---
     public void calcularTotal() {
-        this.total = juegos.stream()
+        this.total = juego.stream()
                            .mapToDouble(Juego::getPrecio)
                            .sum();
     }
@@ -56,11 +56,11 @@ public class Carrito {
     }
 
     public List<Juego> getJuegos() {
-        return juegos;
+        return juego;
     }
 
     public void setJuegos(List<Juego> juegos) {
-        this.juegos = juegos;
+        this.juego = juegos;
         calcularTotal();
     }
 
@@ -82,12 +82,12 @@ public class Carrito {
 
     // --- Métodos auxiliares ---
     public void agregarJuego(Juego juego) {
-        juegos.add(juego);
+        juego.add(juego);
         calcularTotal();
     }
 
     public void eliminarJuego(Juego juego) {
-        juegos.remove(juego);
+        juego.remove(juego);
         calcularTotal();
     }
 }
