@@ -1,5 +1,7 @@
 package Acces.api.Acces.repository;
 
-public class CarritoRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import Acces.api.Acces.entity.Carrito;
 
+public interface CarritoRepository extends JpaRepository<Carrito, Long> {
 }
