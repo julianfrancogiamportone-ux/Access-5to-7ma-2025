@@ -36,7 +36,7 @@ public class TrailerController {
     // 🔹 Actualizar trailer existente
     @PutMapping("/{id}")
     public Trailer actualizarTrailer(@PathVariable Long id, @RequestBody Trailer trailer) {
-        trailer.setId(id); // ahora sí, porque ya agregaste el setId() en la entidad
+        trailer.setId(id); 
         return trailerService.guardar(trailer);
     }
 
