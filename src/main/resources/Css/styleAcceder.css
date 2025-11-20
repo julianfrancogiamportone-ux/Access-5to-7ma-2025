@@ -1,177 +1,192 @@
+/* ======== ESTILOS GENERALES ======== */
 body {
-    margin: 0;
-    font-family: sans-serif;
-  }
-  
-  #barra {
-    background-color: #1c1c1c;
-    color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    
-  }
-  
-  .contenedor-barra {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 30px;
-    background-image: url("img/fondo.jpg");
-    background-size: cover;
-    background-position: center;
-    
-  }
-  
-  #logo {
-    font-size: 40px;
-    font-weight: bold;
-    color: #820302;
-    text-shadow: 1px 1px 3px black;
-  }
-  
-  #acciones {
-    display: flex;
-    gap: 10px;
-  }
-  
-  #acciones button {
-    background-color: #820302;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 20px;
-    cursor: pointer;
-  }
-  
-  #acciones button:hover {
-    background-color: rgb(86, 86, 86);
-    color: #820302;
-  }
-  
-  #cuerpo {
-    justify-items: center;
-    background-color: #111;
-    padding: 40px 100px;
-    background-image: url("img/fondo.jpg");
-    background-size: cover;
-    background-position: center;
-    overflow-x: hidden;
-  }
-  .contenedor {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 100px 40px;
-    box-sizing: border-box;
-    height: 550px;
-    width: 1200px;
-    background-color: rgba(130, 3, 2, 0.2);
-    border-radius: 20px;
-  }
-  
-  .bienvenida {
-    color: #ffffff;
-    font-size: 26px;
-    width: 50%;
-    padding: 0 40px;
-    text-shadow: 1px 1px 1px;
-  }
-  
-  .login-box {
-    width: 350px;
-    background-color: rgba(130, 3, 2, 0.2);
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-  }
-  
-  .login-box h2 {
-    text-shadow: 1px 1px 1px;
-    color: #ffffff;
-    margin-bottom: 10px;
-  }
-  
-  .cuenta {
-    color: #ffffff;
-    font-size: 0.9em;
-    margin-bottom: 20px;
-  }
-  
-  .login-box button {
-    width: 70%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 10px;
-    font-size: 0.95em;
-    cursor: pointer;
-    font-family: inherit;
-  }
-  
-  .google {
-    margin-left: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    color: black;
-    
-  }
-  
-  .facebook {
-    margin-left: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #1877f2;
-    color: white;
-  }
-  
-  .apple {
-    margin-left: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: black;
-    color: white;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .icon {
-    font-weight: bold;
-    margin-left: 5px;
-  }
-  
-  .divisor {
-    margin: 20px 0;
-    color: #ffffff;
-  }
-  
-  .login-box input {
-    width: 60%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border: none;
-    border-radius: 10px;
-    font-family: inherit;
-    font-size: 0.9em;
-  }
-  
-  .login-btn {
-    background: red;
-    color: white;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 1px;
-  }
-  h1{
-    color: #ffffff;
-  }
-  a {
-    color: #ffffff;
-  }
-  img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-  }
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* ======== NAVBAR ======== */
+#navbar {
+  background-color: #1c1c1c;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px;
+  background-image: url("img/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#navbar-logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: #820302;
+  text-shadow: 1px 1px 3px black;
+}
+
+#navbar-actions {
+  display: flex;
+  gap: 10px;
+}
+
+#btn-volver {
+  background-color: #820302;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#btn-volver:hover {
+  background-color: rgb(86, 86, 86);
+  color: #820302;
+}
+
+/* ======== CUERPO PRINCIPAL ======== */
+#main-content {
+  justify-items: center;
+  background-color: #111;
+  padding: 40px 100px;
+  background-image: url("img/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 40px;
+  box-sizing: border-box;
+  height: 550px;
+  width: 1200px;
+  background-color: rgba(130, 3, 2, 0.2);
+  border-radius: 20px;
+}
+
+.welcome-title {
+  color: #ffffff;
+  font-size: 26px;
+  width: 50%;
+  padding: 0 40px;
+  text-shadow: 1px 1px 1px;
+}
+
+
+.login-container {
+  width: 350px;
+  background-color: rgba(130, 3, 2, 0.2);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.login-title {
+  text-shadow: 1px 1px 1px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.register-text {
+  color: #ffffff;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+
+
+#social-login .btn-social {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95em;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.social-google {
+  background: white;
+  color: black;
+}
+
+.social-facebook {
+  background: #1877f2;
+  color: white;
+}
+
+.social-apple {
+  background: black;
+  color: white;
+}
+
+.icon {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.divider {
+  margin: 20px 0;
+  color: #ffffff;
+}
+
+
+
+#login-form input {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.9em;
+}
+
+#btn-login {
+  background: red;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px;
+  width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+h1 {
+  color: #ffffff;
+}
+
+a {
+  color: #ffffff;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#main-content {
+  min-height: 100vh;
+}

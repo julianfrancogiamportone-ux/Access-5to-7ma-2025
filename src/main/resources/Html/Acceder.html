@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACCES</title>
+  <link href="/styleAcceder.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Barra Superior -->
+  <header id="navbar">
+    <div class="navbar-container">
+      <div id="navbar-logo">ACCESS</div>
+
+      <div id="navbar-actions">
+        <a href="index.html">
+          <button id="btn-volver">VOLVER</button>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main id="main-content">
+    <div class="content-container">
+
+      <h1 class="welcome-title">¡Hola, te damos la bienvenida a ACCES!</h1>
+
+      <!-- Caja de Login -->
+      <section id="login-section" class="login-container">
+
+        <h2 class="login-title">INICIAR SESIÓN</h2>
+
+        <p class="register-text">
+          ¿Nuevo usuario?
+          <a href="#" id="link-crear-cuenta">Crea una cuenta</a>
+        </p>
+
+        <!-- Botones sociales -->
+        <div id="social-login">
+          <button class="btn-social social-google">
+            Continuar con 
+            <span class="icon">
+              <img src="img/google.png" alt="Google">
+            </span>
+          </button>
+
+          <button class="btn-social social-facebook">
+            Continuar con 
+            <span class="icon">
+              <img src="img/Facebook.png" alt="Facebook">
+            </span>
+          </button>
+
+          <button class="btn-social social-apple">
+            Continuar con 
+            <span class="icon">
+              <img src="img/Apple.png" alt="Apple">
+            </span>
+          </button>
+        </div>
+
+        <div class="divider">— o —</div>
+
+        <!-- Formulario -->
+        <form id="login-form">
+          <input 
+            id="input-email" 
+            name="email" 
+            type="text" 
+            placeholder="Email..." 
+            required
+          >
+
+          <input 
+            id="input-password" 
+            name="password" 
+            type="password" 
+            placeholder="Contraseña..."
+            required
+          >
+
+          <button id="btn-login" type="submit">INICIAR SESIÓN</button>
+        </form>
+
+      </section>
+
+    </div>
+  </main>
+
+</body>
+</html>

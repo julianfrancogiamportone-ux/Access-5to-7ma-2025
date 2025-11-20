@@ -7,7 +7,6 @@ body {
   background-color: #1c1c1c;
   color: white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-  
 }
 
 .contenedor-barra {
@@ -50,11 +49,13 @@ body {
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
+
 #buscador img {
   width: 20px;
   height: 20px;
   margin-right: 5px;
 }
+
 #acciones {
   display: flex;
   gap: 10px;
@@ -75,7 +76,6 @@ body {
   gap: 10px;
   padding: 10px 0;
   background-color: #111;
-  
 }
 
 #menu button {
@@ -93,11 +93,13 @@ body {
   background-color: rgb(86, 86, 86);
   color: #820302;
 }
+
 #acciones button:hover {
   background-color: rgb(86, 86, 86);
   color: #820302;
 }
 
+/* 🎥 TRAILER NUEVO */
 #cuerpo {
   justify-items: center;
   background-color: #111;
@@ -107,33 +109,30 @@ body {
   background-position: center;
   overflow-x: hidden;
 }
-.carrusel {
+
+.trailer-container {
   background-color: rgba(130, 3, 2, 0.2);
   position: relative;
-  width: 1400px;
-  height: 375px;
-  overflow: hidden;
-  margin: auto;
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+  margin: 0 auto;
   border-radius: 15px;
   border: 2px solid #911c1c;
-}
-
-.contenedor-imagenes {
-  height: 200px;
   display: flex;
-  transition: transform 0.5s ease;
-  width: max-content;
+  justify-content: center;
+  align-items: center;
 }
 
-.contenedor-imagenes img {
-  padding: 10px;
-  width: 700px;
-  height: 350px;
-  object-fit: cover;
+.trailer-container iframe {
+  width: 100%;
+  height: 100%;
   border-radius: 15px;
-  margin-right: 10px;
 }
 
+/* ----------------- */
+/* 🎮 Tarjetas de juegos */
+/* ----------------- */
 
 .fondo-juegos {
   background-color: rgba(130, 3, 2, 0.2);
@@ -213,7 +212,3 @@ body {
 .boton-carrito:hover {
   transform: scale(1.1);
 }
-
-
-
-

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - ACCES</title>
+  <link href="styleCarrito.css" rel="stylesheet">
+  <link href="menu.css" rel="stylesheet">
+  <script src="carrito.js" defer></script>
+</head>
+<body>
+  <div id="barra">
+    <div class="contenedor-barra">
+      <div id="logo">ACCESS</div>
+      <div id="buscador">
+        <input type="text" placeholder="Buscar...">
+        <button><img src="/img/lupa.png"></button>
+      </div>
+      <div id="acciones">
+        <div id="monedas">$0</div>
+        <a href="carrito.html"><button>CARRITO</button></a>
+        <a href="Acceder.html"><button>ACCEDER</button></a>
+      </div>
+    </div>
+    <div id="menu">
+      <a href="index.html"><button>INICIO</button></a>
+      <a href="mas vendidos.html"><button>MÁS VENDIDOS</button></a>
+      <a href="ofertas.html"><button>OFERTAS</button></a>
+      <a href="Categoria.html"><button>CATEGORIAS</button></a>
+    </div>
+  </div>
+
+  <div id="cuerpo">
+    <div class="productos" id="lista-productos">
+    </div>
+
+    <div class="resumen">
+      <h2>Resumen</h2>
+      <b>Total: <span id="total-precio">$0.00 USD</span></b>
+      <div class="pagos">
+        <a href="pago.html"><button class="boton-pago">PAGAR</button></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const botones = document.querySelectorAll('.boton-pago');
+    botones.forEach(boton => {
+      boton.addEventListener("click", () => {
+        localStorage.setItem("totalCompra", document.getElementById("total-precio").innerText);
+      });
+    });
+  </script>
+
+</body>
+</html>

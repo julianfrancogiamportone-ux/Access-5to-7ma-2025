@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACCESS</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <script>
+    
+  window.addEventListener("DOMContentLoaded", () => {
+  const ruta = window.location.pathname;
+  const actual = ruta.substring(ruta.lastIndexOf("/") + 1).replace("%20", " ");
+
+    document.querySelectorAll("#menu a").forEach(link => {
+    const href = link.getAttribute("href").replace("%20", " ");
+    if (href === actual) {
+      link.querySelector("button").classList.add("activo");
+    }
+    });
+  });
+  </script>
+  <link href="https://webfonts.ffonts.net/Nico-Moji.font" rel="stylesheet">
+  
+</head>
+<body>
+  <div id="barra">
+    <div class="contenedor-barra">
+      <div id="logo">ACCESS</div>
+  
+      <div id="buscador">
+        <input type="text" placeholder="Buscar...">
+        <button><img src="/img/lupa.png"></button>
+      </div>
+  
+      <div id="acciones">
+        <div id="monedas">$0</div>
+        <a href="carrito.html"><button>CARRITO</button></a>
+        <a href="Acceder.html"><button>ACCEDER</button></a>
+      </div>
+    </div>
+  
+    <div id="menu">
+      <a href="index.html"><button>INICIO</button></a>
+      <a href="mas vendidos.html"><button>MÁS VENDIDOS</button></a>
+      <a href="ofertas.html"><button>OFERTAS</button></a>
+      <a href="Categoria.html"><button>CATEGORIAS</button></a>
+    </div>
+    
+  </div>
+  <div id="cuerpo">
+    <div class="trailer-container">
+      <iframe 
+        id="trailer-video"
+        width="100%" 
+        height="100%" 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="Trailer"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="fondo-juegos">
+      <div class="juegos">
+    
+        <div class="card-juego">
+          <img src="img/PZ.jpg" alt="Project Zomboid" class="imagen-juego">
+          <div class="info">
+            <span class="novedad">NOVEDAD</span>
+            <div class="NJ">PROJECT ZOMBOID</div>
+            <div class="precio">9.99 USD</div>
+            <div class="plataforma">STEAM - PC</div>
+
+          </div>
+          <button class="comprar-monedas" data-precio="250">Comprar con 250 Monedas</button>
+          <button class="boton-carrito">Añadir al carrito</button>
+        </div>
+  
+        <div class="card-juego">
+          <img src="img/Rust.jpg" alt="Rust" class="imagen-juego">
+          <div class="info">
+            <span class="novedad">NOVEDAD</span>
+            <div class="NJ">RUST</div>
+            <div class="precio">14.99 USD</div>
+            <div class="plataforma">STEAM - PC</div>
+          </div>
+          <button class="comprar-monedas" data-precio="250">Comprar con 250 Monedas</button>
+          <button class="boton-carrito">Añadir al carrito</button>
+        </div>
+    
+        <div class="card-juego">
+          <img src="img/AC.jpg" alt="Assetto Corsa" class="imagen-juego">
+          <div class="info">
+            <span class="novedad">NOVEDAD</span>
+            <div class="NJ">ASSETTO CORSA</div>
+            <div class="precio">29.99 USD</div>
+            <div class="plataforma">STEAM - PC</div>
+          </div>
+          <button class="comprar-monedas" data-precio="250">Comprar con 250 Monedas</button>
+          <button class="boton-carrito">Añadir al carrito</button>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+</body>
+</html>
