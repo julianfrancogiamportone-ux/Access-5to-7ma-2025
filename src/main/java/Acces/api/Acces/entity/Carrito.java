@@ -80,14 +80,14 @@ public class Carrito {
         this.total = total;
     }
 
-    // --- Métodos auxiliares ---
-    public void agregarJuego(Juego juego) {
-        juego.add(juego);
+
+    public void agregarJuego(Juego j) {
+        this.juego.add(j); 
         calcularTotal();
     }
 
-    public void eliminarJuego(Juego juego) {
-        juego.remove(juego);
+    public void eliminarJuego(Juego j) {
+        this.juego.remove(j);
         calcularTotal();
     }
 }
