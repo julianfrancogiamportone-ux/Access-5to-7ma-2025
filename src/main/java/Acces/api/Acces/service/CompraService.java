@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CompraService {
+public class CompraService implements CompraIService {
 
     private final CompraRepository compraRepository;
 
@@ -16,18 +16,22 @@ public class CompraService {
         this.compraRepository = compraRepository;
     }
 
+    @Override
     public List<Compra> listarCompras() {
         return compraRepository.findAll();
     }
 
+    @Override
     public Optional<Compra> obtenerCompraPorId(Long id) {
         return compraRepository.findById(id);
     }
 
+    @Override
     public Compra crearCompra(Compra compra) {
         return compraRepository.save(compra);
     }
 
+    @Override
     public Compra actualizarCompra(Long id, Compra compraActualizada) {
         return compraRepository.findById(id).map(compra -> {
             compra.setMetodoPago(compraActualizada.getMetodoPago());
@@ -39,6 +43,7 @@ public class CompraService {
         }).orElseThrow(() -> new RuntimeException("Compra no encontrada con id: " + id));
     }
 
+    @Override
     public void eliminarCompra(Long id) {
         compraRepository.deleteById(id);
     }
