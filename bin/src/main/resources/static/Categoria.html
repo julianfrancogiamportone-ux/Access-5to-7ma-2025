@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACCES</title>
+  <link href='/styleC.css' rel='stylesheet'>
+  <link href="menu.css" rel="stylesheet">
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const actual = window.location.pathname.split("/").pop(); // obtiene el archivo actual
+      const botones = document.querySelectorAll('#menu a');
+  
+      botones.forEach(link => {
+        if (link.getAttribute('href') === actual) {
+          link.querySelector('button').classList.add('activo');
+        }
+      });
+    });
+  </script>
+  
+</head>
+<body>
+  <div id="barra">
+    <div class="contenedor-barra">
+      <div id="logo">ACCESS</div>
+  
+      <div id="buscador">
+        <input type="text" placeholder="Buscar...">
+        <button><img src="/img/lupa.png"></button>
+      </div>
+  
+      <div id="acciones">
+        <div id="monedas"></div>
+        <a href="Carrito.html"><button>CARRITO</button></a>
+        <a href="Acceder.html"><button>ACCEDER</button></a>
+      </div>
+    </div>
+  
+    <div id="menu">
+      <a href="index.html"><button>INICIO</button></a>
+      <a href="mas vendidos.html"><button>MÁS VENDIDOS</button></a>
+      <a href="ofertas.html"><button>OFERTAS</button></a>
+      <a href="Categoria.html"><button>CATEGORIAS</button></a>
+    </div>
+  </div>
+  <div id="cuerpo">
+    <div class="contenedor">
+      <div class="categoria">
+        <h3>GÉNERO DE JUEGO</h3>
+        <ul>
+          <li><a href="#">Acción</a></li>
+          <li><a href="#">Aventura</a></li>
+          <li><a href="#">Rol (RPG)</a></li>
+          <li><a href="#">Shooter (disparos)</a></li>
+          <li><a href="#">Estrategia</a></li>
+          <li><a href="#">Simulación</a></li>
+          <li><a href="#">Deportes</a></li>
+          <li><a href="#">Carreras</a></li>
+          <li><a href="#">Lucha</a></li>
+          <li><a href="#">Plataformas</a></li>
+          <li><a href="#">Puzzle / Rompecabezas</a></li>
+          <li><a href="#">Mundo abierto (Open World)</a></li>
+          <li><a href="#">Survival (Supervivencia)</a></li>
+          <li><a href="#">Battle Royale</a></li>
+        </ul>
+      </div>
+  
+      <div class="categoria">
+        <h3>MODO DE JUEGO</h3>
+        <ul>
+          <li><a href="#">Un jugador (Single player)</a></li>
+          <li><a href="#">Multijugador local</a></li>
+          <li><a href="#">Multijugador online</a></li>
+          <li><a href="#">Cooperativo</a></li>
+          <li><a href="#">PvP (Jugador contra jugador)</a></li>
+          <li><a href="#">MMO (Multijugador masivo en línea)</a></li>
+          <li><a href="#">Cross-play (juego cruzado)</a></li>
+          <li><a href="#">VR (Realidad virtual)</a></li>
+        </ul>
+      </div>
+  
+      <div class="categoria">
+        <h3>ESTILO DE JUEGO</h3>
+        <ul>
+          <li><a href="#">Indie</a></li>
+          <li><a href="#">Triple A (AAA)</a></li>
+          <li><a href="#">Retro / Clásicos</a></li>
+          <li><a href="#">Sandbox</a></li>
+          <li><a href="#">Narrativo</a></li>
+          <li><a href="#">Basado en historia real</a></li>
+          <li><a href="#">Juegos de cartas</a></li>
+          <li><a href="#">Juegos de tablero</a></li>
+          <li><a href="#">Point and Click</a></li>
+          <li><a href="#">Rítmicos / Musicales</a></li>
+          <li><a href="#">Educativos</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

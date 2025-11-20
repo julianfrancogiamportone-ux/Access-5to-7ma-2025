@@ -1,0 +1,114 @@
+body {
+    background-image: url("img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+#cuerpo-pago {
+    width: 100%;
+    max-width: 800px;
+    height: 100vh; /* ocupa toda la pantalla */
+    display: flex;
+    justify-content: center; /* centra horizontal */
+    align-items: center; /* centra vertical */
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+}
+
+/* Caja de pago */
+.pago-container {
+    background: rgba(255, 255, 255, 0.88);
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 450px;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.25);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Títulos */
+.pago-container h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+/* Labels */
+.pago-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Inputs */
+.pago-container input,
+.pago-container select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #999;
+    margin-bottom: 14px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Botón */
+.pago-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.pago-container button:hover {
+    background-color: #004ecc;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#mensaje-exito {
+    margin-top: 15px;
+    background-color: #008f39;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .btn-volver {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+  }
+  
+  .btn-volver:hover {
+    background-color: #999;
+    color: #111;
+  }
+
+ .hidden {
+    display: none !important;
+}

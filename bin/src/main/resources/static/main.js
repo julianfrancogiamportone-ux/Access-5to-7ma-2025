@@ -110,7 +110,7 @@ document.addEventListener("click", e => {
 *  TRAILER DESDE API
 ************************************************************/
 function cargarTrailer() {
-  fetch("/api/trailers/110")
+  fetch("/api/trailers/1")
       .then(r => r.json())
       .then(data => {
           const iframe = document.getElementById("trailer-video");
