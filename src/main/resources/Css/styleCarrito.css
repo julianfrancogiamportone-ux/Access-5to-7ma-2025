@@ -1,0 +1,331 @@
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+#barra {
+  background-color: #1c1c1c;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.contenedor-barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background-image: url("img/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: #820302;
+  text-shadow: 1px 1px 3px black;
+}
+
+#buscador {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+#buscador input {
+  width: 300px;
+  padding: 8px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  outline: none;
+}
+
+#buscador button {
+  padding: 8px 15px;
+  background-color: #820302;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+#buscador img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+#acciones {
+  display: flex;
+  gap: 10px;
+}
+
+#acciones button {
+  background-color: #820302;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#acciones button:hover,
+#menu button:hover {
+  background-color: rgb(86, 86, 86);
+  color: #820302;
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+  background-color: #111;
+}
+
+#menu button {
+  text-shadow: 1px 1px 3px black;
+  background-color: #820302;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* CUERPO CARRITO */
+#cuerpo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 100px;
+  background-image: url("img/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  gap: 40px;
+}
+
+.productos {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 35%;
+  margin: 0 auto; 
+}
+.producto {
+  display: flex;
+  align-items: center;
+  background-color: rgba(130, 3, 2, 0.2);
+  border: 2px solid #820302;
+  border-radius: 15px;
+  padding: 10px 20px;
+  gap: 20px;
+  color: white;
+}
+
+.producto img {
+  width: 100px;
+  border-radius: 10px;
+  border: 3px solid white;
+}
+
+/* RESUMEN DE COMPRA */
+.resumen {
+  background-color: rgba(130, 3, 2, 0.2);
+  border: 2px solid #911c1c;
+  border-radius: 15px;
+  padding: 30px;
+  width: 300px;
+  color: white;
+  text-align: center;
+}
+
+.resumen h2 {
+  margin-top: 0;
+  text-shadow: 1px 1px 3px black;
+}
+
+.pagos {
+  margin-top: 20px;
+}
+
+.pagos button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.pagos button:hover {
+  background-color: #ddd;
+}
+
+.pagos button img {
+  width: 30px;
+  height: auto;
+}
+
+.impuestos {
+  font-size: 16px;
+  margin-top: 15px;
+  color: #ccc;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-contenido {
+  background-color: #1b1b1b;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  color: white;
+}
+
+.modal-contenido h2 {
+  margin-top: 0;
+}
+
+.modal-contenido label {
+  display: block;
+  margin-top: 10px;
+}
+
+.modal-contenido input,
+.modal-contenido select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 5px;
+  border: none;
+  background: #333;
+  color: white;
+}
+
+.modal-contenido button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background-color: #0e841a;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cerrar {
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+}
+/* Modal general */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.9);
+  backdrop-filter: blur(3px);
+}
+
+/* Contenido del modal */
+.modal-contenido {
+  background: linear-gradient(145deg, #1c1c1c, #2a2a2a);
+  margin: 5% auto;
+  padding: 25px 30px;
+  width: 480px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+/* Botón cerrar */
+.cerrar {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Estilo de formularios */
+.modal-contenido h2 {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.grupo-form {
+  margin-bottom: 20px;
+}
+
+.grupo-form label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.grupo-form input,
+.grupo-form select {
+  width: 100%;
+  padding: 8px;
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.btn-confirmar {
+  background-color: #d31919;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  width: 100%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-confirmar:hover {
+  background-color: #ff3333;
+}
+.pagos img {
+  height: 20px;
+  width: 20px;
+}

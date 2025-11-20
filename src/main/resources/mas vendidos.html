@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACCES</title>
+  <link href='/styleMV.css' rel='stylesheet'>
+  <link href="menu.css" rel="stylesheet">
+  <script src="main.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const actual = window.location.pathname.split("/").pop(); // obtiene el archivo actual
+      const botones = document.querySelectorAll('#menu a');
+  
+      botones.forEach(link => {
+        if (link.getAttribute('href') === actual) {
+          link.querySelector('button').classList.add('activo');
+        }
+      });
+    });
+  </script>
+  
+</head>
+<body>
+  <div id="barra">
+    <div class="contenedor-barra">
+      <div id="logo">ACCES</div>
+  
+      <div id="buscador">
+        <input type="text" placeholder="Buscar...">
+        <button><img src="/img/lupa.png"></button>
+      </div>
+  
+      <div id="acciones">
+        <a href="carrito.html"><button>CARRITO</button></a>
+        <a href="Acceder.html"><button>ACCEDER</button></a>
+      </div>
+    </div>
+  
+    <div id="menu">
+      <a href="index.html"><button>INICIO</button></a>
+      <a href="mas vendidos.html"><button>MÁS VENDIDOS</button></a>
+      <a href="ofertas.html"><button>OFERTAS</button></a>
+      <a href="Categoria.html"><button>CATEGORIAS</button></a>
+    </div>
+  </div>
+  <div id="cuerpo">
+    <div class="fondo-juegos">
+      <div class="juegos">
+    
+        <div class="card-juego">
+          <img src="img/Minecraft.jpeg" alt="Minecraft">
+          <div class="info">
+            <h3>Minecraft</h3>
+            <p><del>29.99 USD</del> <strong>19.99 USD</strong></p>
+            <p>STEAM - PC</p>
+          </div>
+          <button class="boton-carrito">Añadir al carrito</button>
+        </div>
+  
+        <div class="card-juego">
+          <img src="img/GTA5.jpg" alt="Grand Theft Auto V">
+          <div class="info">
+            <h3>Grand Theft Auto V</h3>
+            <p><del>19.99 USD</del> <strong>11.99 USD</strong></p>
+            <p>STEAM - PC</p>
+          </div>
+          <button class="boton-carrito">Añadir al carrito</button>
+        </div>
+    
+        <div class="card-juego">
+          <img src="img/ER.jpg" alt="Elden Ring">
+          <div class="info">
+            <h3>Elden Ring</h3>
+            <p>19.99 USD</p>
+            <p>STEAM - PC</p>
+          </div>
+          <button class="boton-carrito">Añadir al carrito</button>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+</body>
+</html>

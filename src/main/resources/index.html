@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACCES</title>
+  <link href='/style.css' rel='stylesheet'>
+  <script src="main.js"></script>
+  <link href="https://webfonts.ffonts.net/Nico-Moji.font" rel="stylesheet">
+  
+</head>
+<body>
+  <div id="barra">
+    <div class="contenedor-barra">
+      <div id="logo">ACCES</div>
+  
+      <div id="buscador">
+        <input type="text" placeholder="Buscar...">
+        <button><img src="/img/lupa.png"></button>
+      </div>
+  
+      <div id="acciones">
+        <a href="carrito.html"><button>CARRITO</button></a>
+        <a href="Acceder.html"><button>ACCEDER</button></a>
+      </div>
+    </div>
+  
+    <div id="menu">
+      <a href="index.html"><button>INICIO</button></a>
+      <a href="mas vendidos.html"><button>MÁS VENDIDOS</button></a>
+      <a href="ofertas.html"><button>OFERTAS</button></a>
+      <a href="Categoria.html"><button>CATEGORIAS</button></a>
+    </div>
+    
+  </div>
+  <div id="cuerpo">
+    <div class="carrusel">
+      <div class="contenedor-imagenes" id="contenedor">
+        <img src="img/Spiderman2.jpg" alt="Spider-Man 2">
+        <img src="img/TLOU2.jpg" alt="The Last of Us">
+        <img src="img/godofwar.jpg" alt="God of War">
+      </div>
+      <button class="flecha" onclick="siguiente()">➤</button>
+    </div> 
+
+    <div class="fondo-juegos">
+      <div class="juegos">
+    
+        <div class="card-juego">
+          <img src="img/PZ.jpg" alt="Project Zomboid">
+          <div class="info">
+            <span class="novedad">NOVEDAD</span>
+            <h3>PROJECT ZOMBOID</h3>
+            <p>9.99 USD</p>
+            <p>STEAM - PC</p>
+          </div>
+          <button class="boton-carrito">Añadir al carrito</button>
+        </div>
+  
+        <div class="card-juego">
+          <img src="img/Rust.jpg" alt="Rust">
+          <div class="info">
+            <span class="novedad">NOVEDAD</span>
+            <h3>RUST</h3>
+            <p>14.99 USD</p>
+            <p>STEAM - PC</p>
+          </div>
+          <button class="boton-carrito">Añadir al carrito</button>
+        </div>
+    
+        <div class="card-juego">
+          <img src="img/AC.jpg" alt="Assetto Corsa">
+          <div class="info">
+            <span class="novedad">NOVEDAD</span>
+            <h3>ASSETTO CORSA</h3>
+            <p>29.99 USD</p>
+            <p>STEAM - PC</p>
+          </div>
+          <button class="boton-carrito">Añadir al carrito</button>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+</body>
+</html>

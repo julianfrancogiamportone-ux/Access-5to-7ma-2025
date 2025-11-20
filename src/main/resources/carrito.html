@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - ACCES</title>
+  <link href="styleCarrito.css" rel="stylesheet">
+  <link href="menu.css" rel="stylesheet">
+  <script src="carrito.js" defer></script>
+</head>
+<body>
+  <div id="barra">
+    <div class="contenedor-barra">
+      <div id="logo">ACCES</div>
+      <div id="buscador">
+        <input type="text" placeholder="Buscar...">
+        <button><img src="/img/lupa.png"></button>
+      </div>
+      <div id="acciones">
+        <a href="carrito.html"><button>CARRITO</button></a>
+        <a href="Acceder.html"><button>ACCEDER</button></a>
+      </div>
+    </div>
+    <div id="menu">
+      <a href="index.html"><button>INICIO</button></a>
+      <a href="mas vendidos.html"><button>MÁS VENDIDOS</button></a>
+      <a href="ofertas.html"><button>OFERTAS</button></a>
+      <a href="Categoria.html"><button>CATEGORIAS</button></a>
+    </div>
+  </div>
+
+  <div id="cuerpo">
+    <div class="productos" id="lista-productos">
+    </div>
+
+    <div class="resumen">
+      <h2>Resumen</h2>
+      <b>Total: <span id="total-precio">$0.00 USD</span></b>
+      <div class="pagos">
+        <button class="boton-pago" data-metodo="PayPal">
+          PAGAR CON <img src="img/Paypal_2014_logo.png">
+        </button>
+        <button class="boton-pago" data-metodo="Visa">
+          PAGAR CON <img src="img/Visa_Inc._logo.svg.png">
+        </button>
+        <button class="boton-pago" data-metodo="Master Card">
+          PAGAR CON <img src="img/MasterCard_Logo.svg.png">
+        </button>
+        <button class="boton-pago" data-metodo="Mercado Pago">
+          PAGAR CON <img src="img/mercado-pago-logo-0.png">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-pago" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar">&times;</span>
+      <h2>Método de pago: <span id="metodo-seleccionado"></span></h2>
+      <form id="formulario-pago">
+        <label>Nombre:</label>
+        <input type="text" required>
+
+        <label>Apellidos:</label>
+        <input type="text" required>
+
+        <label>Número de tarjeta:</label>
+        <input type="text" maxlength="16" required>
+
+        <label>Fecha de caducidad:</label>
+        <input type="month" required>
+
+        <label>Código de seguridad:</label>
+        <input type="text" maxlength="3" required>
+
+        <label>País:</label>
+        <select required>
+          <option value="Argentina">Argentina</option>
+          <option value="Chile">Chile</option>
+          <option value="Otro">Otro</option>
+        </select>
+
+        <label>Dirección:</label>
+        <input type="text" required>
+
+        <label>Código postal:</label>
+        <input type="text" required>
+
+        <button type="submit">Finalizar compra</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const botonesPago = document.querySelectorAll('.boton-pago');
+    const modal = document.getElementById('modal-pago');
+    const cerrar = document.querySelector('.cerrar');
+    const metodoTexto = document.getElementById('metodo-seleccionado');
+
+    botonesPago.forEach(boton => {
+      boton.addEventListener('click', () => {
+        const metodo = boton.dataset.metodo;
+        metodoTexto.textContent = metodo;
+        modal.style.display = 'block';
+      });
+    });
+
+    cerrar.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', e => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+
+    document.getElementById('formulario-pago').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("✅ ¡Pago exitoso!");
+      modal.style.display = 'none';
+      localStorage.removeItem('carrito');
+      location.reload();
+    });
+  </script>
+</body>
+</html>
